@@ -4,7 +4,7 @@
 #include "Adafruit_DHT_Particle.h"
 #include <MQTT.h>
 
-
+ 
 DHT dht(D2, DHT22);
 
 LiquidCrystal lcd(A5, A4, D6, D0, D1, D7); // Shield shield v3.0.1
@@ -12,7 +12,7 @@ LiquidCrystal lcd(A5, A4, D6, D0, D1, D7); // Shield shield v3.0.1
 int lastDSTCheckDay = 0;
 
 void callback(char* topic, byte* payload, unsigned int length);
-MQTT client("192.168.2.226", 1883, callback);
+MQTT client("192.168.2.245", 1883, callback);
 static const char* deviceTopic = "home1/masterbedroom/device/tempsensor";
 
 static const char* tempTopic  = "home1/masterbedroom/temp";
